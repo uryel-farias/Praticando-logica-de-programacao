@@ -7,7 +7,10 @@ function sortear() {
     let numero;
 
     if (aPartirDe >= ate ) {
-        alert('O valor do campo "Do número" é maior do que a quantidade definina no campo "Até". Por favor digite novamente.')
+        alert('O valor do campo "Do número" é maior do que a quantidade definina no campo "Até". Por favor digite novamente.');
+
+        document.querySelector('#de').value = '';
+        document.querySelector('#ate').value = '';
     }else {
         for (let i = 0; i < quantidade; i++){
             numero = obterNumeroAleatorio(aPartirDe, ate);
