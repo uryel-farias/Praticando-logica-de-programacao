@@ -1,9 +1,15 @@
 function adicionar() {
 //recuperar valores - nome, quant, valores
-let nomeProduto = document.querySelector('#produto');
-let quantidade = document.querySelector('#quantidade');
+    let produto = document.querySelector('#produto').value;
+    let nomeProduto = produto.split('-')[0];
+    let valorUnitario = produto.split('R$')[1];
+    let quantidade = document.querySelector('#quantidade');
 
-//alert(nomeProduto.value);
+    let preco = quantidade.value * valorUnitario;
+
+    alert(nomeProduto);
+    alert(valorUnitario);
+    alert(preco)
 //calcular preço = subtotal initário
 //atualizar valor total
 
