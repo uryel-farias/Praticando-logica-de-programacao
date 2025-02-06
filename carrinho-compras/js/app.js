@@ -3,16 +3,18 @@ function adicionar() {
     let produto = document.querySelector('#produto').value;
     let nomeProduto = produto.split('-')[0];
     let valorUnitario = produto.split('R$')[1];
-    let quantidade = document.querySelector('#quantidade');
+    let quantidade = document.querySelector('#quantidade').value;
 
-    let preco = quantidade.value * valorUnitario;
-
-    alert(nomeProduto);
-    alert(valorUnitario);
-    alert(preco)
 //calcular preço = subtotal initário
-//atualizar valor total
+    let preco = quantidade * valorUnitario;
 
+//atualizar valor total
+    let carrinho = document.querySelector('#lista-produtos');
+    carrinho.innerHTML = carrinho.innerHTML + `
+            <section class="carrinho__produtos__produto">
+          <span class="texto-azul">${quantidade}x</span> ${nomeProduto} <span class="texto-azul">R$${preco}</span>
+        </section>
+    `;
 }
 
 function limpar() {
