@@ -18,14 +18,14 @@ function adicionar() {
         </section>
     `;
 
-    quantidade.value = '';
-
+    
     precoTotal += preco;
     let carrinhoTotal = document.querySelector('#valor-total');
     carrinhoTotal.innerHTML = `
     <span class="texto-azul" id="valor-total">R$${precoTotal}</span>
     `;
     
+    quantidade = document.querySelector('#quantidade').value = '';
     
 }
 
