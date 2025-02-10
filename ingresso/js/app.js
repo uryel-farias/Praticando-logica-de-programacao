@@ -16,6 +16,16 @@ function comprar() {
 
     }
 
+    if (tipoIngresso == "inferior" ) {
+        if(quantidade > inferiorDisponivel){
+            alert('Voce pediu uma quantidade superior ao que temos disponível. por favor tente novamente.');  
+        } else {
+                inferiorDisponivel -= quantidade;
+                document.querySelector('#qtd-inferior').textContent= `${inferiorDisponivel}`;
+            }
+
+    }
+
         
         console.log(pistaDisponivel);
     }
