@@ -26,7 +26,16 @@ function comprar() {
 
     }
 
+    if (tipoIngresso == "superior" ) {
+        if(quantidade > superiorDisponivel){
+            alert('Voce pediu uma quantidade superior ao que temos disponível. por favor tente novamente.');  
+        } else {
+                superiorDisponivel -= quantidade;
+                document.querySelector('#qtd-superior').textContent= `${superiorDisponivel}`;
+            }
+
+    }
+
         
-        console.log(pistaDisponivel);
     }
 
