@@ -32,6 +32,11 @@ function sortear() {
 
 function reiniciar() {
 
+    document.querySelector('#nome-amigo').value = '';
+    document.querySelector('#lista-amigos').innerHTML = '';
+    document.querySelector('#lista-sorteio').innerHTML = '';
+    amigos = [];
+
 }
 
 function embaralha(lista) {
